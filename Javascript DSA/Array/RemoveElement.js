@@ -1,7 +1,7 @@
 function removeElement(n,arr){
     let newArr=[];
     for(let i=0;i<arr.length;i++){
-        if(arr[i]!==newArr){
+        if(arr[i]!==n){
             newArr.push(arr[i]);
         }
     }
@@ -10,5 +10,5 @@ function removeElement(n,arr){
 
 }
 let rElement=20;
-let Array=[10,20,30,40,50,60];
-console.log(removeElement(rElement,Array))
+let data=[10,20,30,40,50,60];
+console.log(removeElement(rElement,data))

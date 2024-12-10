@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let data=[];
+    let currentSize=data.length;
+
+    function push(a){
+        data[currentSize]=a;
+        currentSize++;
+
+    }
+
+    function pop(){
+        newArr=data[currentSize-1];
+        currentSize--;
+        data.length=currentSize;
+        return newArr;
+    }
+
+    function reverseString(item){
+        for(let i=0;i<item.length;i++){ 
+            push(item[i]);
+            
+        }
+       
+        for(let i=0;i<item.length;i++){
+           item[i] =pop();
+
+           
+        }
+        return item;
+    }
+   
+
+    let str="Hello";
+    str=str.split("");
+    let rev=reverseString(str);
+    console.log(rev.join(''));
+    // console.log(data);
+    </script>
+</body>
+</html>

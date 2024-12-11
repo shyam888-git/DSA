@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data=[];
+        let currentSize=data.length;
+
+        function enQueue(newValue){
+            data[currentSize]=newValue;
+            currentSize++;
+
+        }
+
+        function deQueue(){
+            currentSize--;
+            data.length=currentSize;
+        }
+        enQueue(10);
+        enQueue(20);
+        enQueue(30);
+        // deQueue();
+       function display(){
+       
+        if(isEmpty()){
+            alert('empty queue')
+        }
+        console.log(data)
+       }
+
+       function front(){
+         console.log(data[0]);
+       }
+
+       function rear(){
+        console.log(data[currentSize-1]);
+       }
+
+       function isEmpty(){
+        if(currentSize<=0){
+            return true
+        }
+        else{
+            return false
+        } 
+       }
+
+    </script>
+    
+</body>
+</html>

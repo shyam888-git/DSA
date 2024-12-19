@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let data=[10,20,30,40,50,8,9,6,2,3];
+    let findEle=9;
+    let start=0;
+    let end=data.length-1;
+    let pos=undefined;
+    data.sort((a,b)=>a-b);
+    while(start<=end){
+        let mid=Math.floor((start+end)/2);
+        if(data[mid]===findEle){
+            pos=mid;
+            break;
+        }
+        else if(data[mid]<findEle){
+
+            start=mid+1
+        }
+        else{
+            end=mid-1
+            
+        }
+        
+    }
+    console.log(pos);
+   </script> 
+</body>
+</html>
